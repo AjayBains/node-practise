@@ -20,7 +20,7 @@ app.use(errorHandlerMiddleware);
 // app.patch('api/v1/tasks/:id') -update task
 // app.delete('api/v1/tasks/:id') -delete task
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
